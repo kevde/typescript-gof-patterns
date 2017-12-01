@@ -1,0 +1,30 @@
+{
+  "name": "typescript-gof-patterns",
+  "version": "0.0.1",
+  "description": "Typescript GOF Patterns",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --opts test/settings/mocha.opts",
+    "start": "node index"
+  },
+  "keywords": [
+    "training"
+  ],
+  "author": "Darkspot.net",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^6.0.81",
+    "chai": "^4.1.0",
+    "chai-things": "^0.2.0",
+    "mocha": "^3.4.2",
+    "q": "^1.5.0",
+    "sinon-chai": "^2.11.0",
+    "ts-node": "^3.2.0",
+    "tsconfig-paths": "^2.2.0",
+    "typescript": "^2.5.0-dev.20170712"
+  },
+  "dependencies": {
+    "inquirer": "^3.2.1"
+  }
+}
