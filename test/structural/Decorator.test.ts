@@ -7,9 +7,11 @@ describe('Decorator tests', () => {
     const penne = new Penne();
     const penneWithSauce = new SauceDecorator(penne);
     const penneWithSauceAndCheese = new CheeseDecorator(penneWithSauce);
+    const pennewithCheeseOnly = new CheeseDecorator(penne);
 
     expect(penne.getPrice()).to.equal(8);
     expect(penneWithSauce.getPrice()).to.equal(13);
     expect(penneWithSauceAndCheese.getPrice()).to.equal(16);
+    expect(pennewithCheeseOnly.getPrice()).to.equal(11);
   });
 });
