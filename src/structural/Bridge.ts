@@ -1,5 +1,6 @@
-class Printer {
- ink: Ink;
+abstract class Printer {
+  ink: Ink;
+  abstract print(): String;
   constructor(ink) {
     this.ink = ink;
   }
@@ -26,7 +27,7 @@ class HPprinter extends Printer {
 }
 
 class Ink {
- type: String;
+  type: String;
   constructor(type) {
     this.type = type;
   }
