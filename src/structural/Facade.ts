@@ -1,40 +1,13 @@
 class ShopFacade {
-  discount: Discount;
-  shipping: Shipping;
-  fees: Fees;
-  constructor() {
-    this.discount = new Discount();
-    this.shipping = new Shipping();
-    this.fees = new Fees();
-  }
-
-  calc(price) {
-    price = this.discount.calc(price);
-    price = this.fees.calc(price);
-    price += this.shipping.calc();
-    return price;
-  }
+  calc(price) {}
 }
 
-class Discount {
-  percent = 0.9;
-  calc(value) {
-    return value * this.percent;
-  }
-}
+// ** ShopFacade should have a price of vale + discount + fees + shipping
+// ** when calc(value) is triggered
+// ** Create the following classes
 
-class Shipping {
-  percent = 5;
-  calc() {
-    return this.percent;
-  }
-}
-
-class Fees {
-  percent = 1.05;
-  calc(value) {
-    return value * this.percent;
-  }
-}
+// Discount = value * 0.9;
+// Shipping = price + 5;
+// Fees = value * 1.05;
 
 export default ShopFacade;

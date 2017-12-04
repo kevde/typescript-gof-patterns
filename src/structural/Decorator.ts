@@ -28,25 +28,8 @@ class PastaDecorator extends Pasta {
   }
 }
 
-
-class SauceDecorator extends PastaDecorator {
-  constructor(pasta) {
-    super(pasta);
-  }
-
-  getPrice() {
-    return super.getPrice() + 5;
-  }
-}
-
-class CheeseDecorator extends PastaDecorator {
-  constructor(pasta) {
-    super(pasta);
-  }
-
-  getPrice() {
-    return super.getPrice() + 3;
-  }
-}
+// Goal: Create Decorators for the following
+// SauceDecorator = Add 5 in Price;
+// CheeseDecorator = Add 3 in Price;
 
 export { Penne, SauceDecorator, CheeseDecorator };

@@ -5,16 +5,11 @@ class Car {
 }
 
 class CarProxy extends Car {
-  driver: Driver;
-  constructor(driver) {
-    super();
-    this.driver = driver;
-  }
+  constructor(driver) {}
 
   drive() {
-    if (this.driver.age < 18)
-      return "too young to drive";
-    return new Car().drive();
+    // ** Disallow the driver to drive if his age is less than 18
+    // message the following: 'too young to drive'
   }
 }
 

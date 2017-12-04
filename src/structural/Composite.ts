@@ -16,25 +16,7 @@ class Equipment {
 }
 
 // --- composite ---
-class Composite extends Equipment {
-  equipments: Equipment[];
-  constructor() {
-    super();
-    this.equipments = [];
-  }
-
-  add(equipment) {
-    this.equipments.push(equipment);
-  }
-
-  get price() {
-    return this.equipments.map(equipment => {
-      return equipment.getPrice();
-    }).reduce((a, b) => {
-      return a + b;
-    });
-  }
-}
+// ** Create Composite **
 
 class Cabbinet extends Composite {
   constructor() {
@@ -44,28 +26,10 @@ class Cabbinet extends Composite {
 }
 
 // --- leafs ---
-class FloppyDisk extends Equipment {
-  constructor() {
-    super();
-    this.setName('Floppy Disk');
-    this.price = 70;
-  }
-}
 
-class HardDrive extends Equipment {
-  constructor() {
-    super();
-    this.setName('Hard Drive');
-    this.price = 250;
-  }
-}
-
-class Memory extends Equipment {
-  constructor() {
-    super();
-    this.setName('Memory');
-    this.price = 280;
-  }
-}
+// ** Create Leafs **
+// FloppyDisk = 70
+// HardDrive = 250
+// Memory = 280
 
 export { Cabbinet, FloppyDisk, HardDrive, Memory };

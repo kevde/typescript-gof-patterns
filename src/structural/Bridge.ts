@@ -6,25 +6,10 @@ abstract class Printer {
   }
 }
 
-class EpsonPrinter extends Printer {
-  constructor(ink) {
-    super(ink);
-  }
+// ** Create Printers
 
-  print() {
-    return "Printer: Epson, Ink: " + this.ink.get();
-  }
-}
-
-class HPprinter extends Printer {
-  constructor(ink) {
-    super(ink);
-  }
-
-  print() {
-    return "Printer: HP, Ink: " + this.ink.get();
-  }
-}
+// HPPrinter
+// EpsonPrinter 
 
 class Ink {
   type: String;
@@ -36,16 +21,9 @@ class Ink {
   }
 }
 
-class AcrylicInk extends Ink {
-  constructor() {
-    super("acrylic-based");
-  }
-}
+// ** Create Inks
+// AcrylicInk = "acrylic-based"
+// AlcoholInk = "alcohol-based"
 
-class AlcoholInk extends Ink {
-  constructor() {
-    super("alcohol-based");
-  }
-}
 
 export { EpsonPrinter, HPprinter, AcrylicInk, AlcoholInk };

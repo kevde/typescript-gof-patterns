@@ -24,15 +24,6 @@ class Jedi {
   }
 }
 
-class JediAdapter implements SoldierInterface {
-  jedi: Jedi;
-  constructor(jedi) {
-    this.jedi = jedi;
-  }
-
-  attack() {
-    return this.jedi.attackWithSaber();
-  }
-}
+// ** Create JediAdapter
 
 export { Soldier, Jedi, JediAdapter };
